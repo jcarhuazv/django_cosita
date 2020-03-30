@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+Create/Update Posts
+{% endblock %}
+
+{% block container %}
+<p>Complete all field.</p>
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Create/Update Post">
+</form>
+{% endblock %}
